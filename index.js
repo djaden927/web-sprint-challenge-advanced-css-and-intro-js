@@ -229,6 +229,7 @@ console.log(artists[8].name);
  
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
+//  take in an array and an index, using template literals to return the sentence tapping into the arr at the correct index and returning the value associated with the name key. 
 function getArtistByIndex(arr, index) {
   return `the artist at index ${index} is ${arr[index].name}`;
 }  
@@ -243,11 +244,12 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
+// take in array, create new empty array before for loop. iterate over each index of given array. in an if statement, split on the spaces the value held in the years key, then parse that string into a number and see if it is greater than or equal to 1900. if it qualifies, push the name of said artist into the new array, return new array. 
 function get20s(arr){
   const twentiethCen = [];
 // While this is working for the test provided, it wouldn't work if someone was born in the 1900's and was still alive/died in the 2000's it is only checking that their birth date was in the 1900's.
   for(let i = 0; i < arr.length; i++){
-    if(parseInt(arr[i].years.split(" ")) > 1900){
+    if(parseInt(arr[i].years.split(" ")) >= 1900){
       twentiethCen.push(arr[i].name);
     }
   }
@@ -265,8 +267,9 @@ get20s(artists);
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
+
+//  take in array and index, look up the index in the given array and  splice one item. return array. 
 function removeArtist(arr, index){
-   /*Your Code Here*/
    arr.splice(index,1);
    return arr.length;
 }
@@ -288,6 +291,8 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
+
+// take in an array, push a specific given object to the back of the array, return modified array. 
 function addArtist(arr){
     arr.push({ 
       id: 21,
@@ -309,6 +314,8 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
+
+// take in an array, declare a new array before for loop. iterate over each index of given array, checking to see if the artists has more than 100 paintings, if they do, push the name of the artist to the new array. return new array with artists names. 
 function lotsOfArt(arr){
   const moreThan100Paintings = [];
   for(let i = 0; i < arr.length; i++){
