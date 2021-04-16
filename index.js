@@ -251,7 +251,7 @@ function get20s(arr){
 
 // modified my if logic to exclude death dates after the 1900's
   for(let i = 0; i < arr.length; i++){
-    if(parseInt(arr[i].years.split(" ")[0]) > 1899 && parseInt(arr[i].years.split(" - ")[1]) < 2000){
+    if(parseInt(arr[i].years.split(" - ")[0]) > 1899 && parseInt(arr[i].years.split(" - ")[1]) < 2000){
       twentiethCen.push(arr[i].name);
     }
   }
