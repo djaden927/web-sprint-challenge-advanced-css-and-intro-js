@@ -230,8 +230,7 @@ console.log(artists[8].name);
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(arr, index) {
-  /*Your Code Here*/
-  return `the artist at index ${index} is ${arr[index].name}`
+  return `the artist at index ${index} is ${arr[index].name}`;
 }  
 
 
@@ -245,13 +244,12 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(arr){
-  /*Your Code Here*/
   const twentiethCen = [];
+// While this is working for the test provided, it wouldn't work if someone was born in the 1900's and was still alive/died in the 2000's it is only checking that their birth date was in the 1900's.
   for(let i = 0; i < arr.length; i++){
     if(parseInt(arr[i].years.split(" ")) > 1900){
       twentiethCen.push(arr[i].name);
     }
-    
   }
   return twentiethCen;
 }
@@ -291,7 +289,6 @@ Use addArtist to do the following:
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
 function addArtist(arr){
-    /*Your Code Here*/
     arr.push({ 
       id: 21,
       name: "Jaden Walker", 
@@ -299,7 +296,7 @@ function addArtist(arr){
       genre: "Web Design", 
       nationality: "American",
       bio: "I am a web development student at Lambda School. I am loving the program so far."
-    } )
+    })
     return arr;
   }
 
@@ -313,14 +310,13 @@ Use lotsOfArt to do the following:
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
 function lotsOfArt(arr){
-  /*Your Code Here*/
-  const morethan100paintings = [];
+  const moreThan100Paintings = [];
   for(let i = 0; i < arr.length; i++){
     if(arr[i].paintings > 100){
-      morethan100paintings.push(arr[i].name)
+      moreThan100Paintings.push(arr[i].name);
     }
   }
-  return morethan100paintings;
+  return moreThan100Paintings;
 }
 
 
